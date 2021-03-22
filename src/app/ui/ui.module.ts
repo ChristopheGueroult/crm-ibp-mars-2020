@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { UiModule } from '../ui/ui.module';
+import { UiComponent } from './ui/ui.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [UiComponent],
   imports: [CommonModule],
-  exports: [UiModule],
+  exports: [UiComponent],
 })
-export class CoreModule {}
+export class UiModule {}
