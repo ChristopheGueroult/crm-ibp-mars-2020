@@ -5,3 +5,17 @@
   ☐ test avec template container et un title en anglais list clients
   ☐ le meme test avec template full width et title en anglais
   ☐ le meme bouton avec le meme event et la meme fn que dans page list orders
+
+☐ page list client (récupérer la collection clients)
+  ☐ créer un enum (ACTIVE , INACTIVE) state-client
+  ☐ créer une interface client-i
+  ☐ créer le model (ng g class client)
+    ☐ default value state = ACTIVE (en utilisant l'enum)
+    ☐ default value tva = 20
+    ☐ default value totalCaHT = 0
+  ☐ créer le service clients
+    ☐ prendre ex sur OrdersService appel http (.../clients)
+  ☐ pagelistclientscomponent.ts récupérer la flux de donné retourné par l'appel http présent sur votre service
+    ☐ injecter votre service clients dans le constructor
+    ☐ créer un variable de type Client[]
+    ☐ initialiser votre variable dans le subscribe() de this.clientsService.collection
