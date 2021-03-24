@@ -1,1 +1,4 @@
-<p>btn works!</p>
+<a *ngIf="route" [routerLink]="route">{{ texte }}</a>
+<a *ngIf="link" [href]="link">{{ texte }}</a>
+<button *ngIf="!route && !link" (click)="doAction()">{{ texte }}</button>
+

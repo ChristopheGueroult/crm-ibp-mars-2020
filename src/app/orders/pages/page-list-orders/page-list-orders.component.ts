@@ -21,4 +21,8 @@ export class PageListOrdersComponent implements OnInit {
   public translateTitle(): void {
     this.title = 'Liste des commandes';
   }
+
+  public action(): void {
+    console.log('open popo ou open what you want or do want you want');
+  }
 }

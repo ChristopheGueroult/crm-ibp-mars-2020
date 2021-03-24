@@ -1,6 +1,8 @@
 <app-template-full-width [title]="title">
   <app-table-light></app-table-light>
-  <app-btn></app-btn>
+  <app-btn route="add" texte="Add Order"></app-btn>
+  <app-btn link="http://coderbase.io" texte="Co to Coderbase"></app-btn>
+  <app-btn texte="Une action" (clicked)="action()"></app-btn>
   <button (click)="translateTitle()">title fr </button>
 </app-template-full-width>
 
