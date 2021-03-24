@@ -1,0 +1,7 @@
+☐ Life cycles
+☐ TP @Input(), TP Observable (référence à Git et Github pour l'exemple)
+
+☐ Page list client
+  ☐ test avec template container et un title en anglais list clients
+  ☐ le meme test avec template full width et title en anglais
+  ☐ le meme bouton avec le meme event et la meme fn que dans page list orders

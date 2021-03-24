@@ -9,6 +9,7 @@ import { OrdersService } from 'src/app/core/services/orders.service';
 })
 export class PageListOrdersComponent implements OnInit {
   public collection!: Order[];
+  public title = 'List Orders';
   constructor(private ordersService: OrdersService) {
     this.ordersService.collection.subscribe((flux) => {
       console.log(flux);
@@ -16,4 +17,8 @@ export class PageListOrdersComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  public translateTitle(): void {
+    this.title = 'Liste des commandes';
+  }
 }
