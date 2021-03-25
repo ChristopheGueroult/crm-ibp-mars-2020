@@ -19,3 +19,16 @@
     ☐ injecter votre service clients dans le constructor
     ☐ créer un variable de type Client[]
     ☐ initialiser votre variable dans le subscribe() de this.clientsService.collection
+
+  ☐ directive d'attr pour ouvrir et fermer le menu dans uicomponent (30mn)
+  ☐ directive de structure ngFor pour le tableau (1h)
+  ☐ directive perso (1h)
+  ☐ pipes angular et pipe perso (1h)
+  ☐ htpp put et delete et post (1h)
+  ☐ 12h25 pause dej
+  ☐ formulaire et la validation de formulaire (3h)
+
+  ☐ tp sur les observables (subjects, behaviorSubject, Observable)
+    ☐ tp edit
+    ☐ tp delete
+    ☐ tp detail routes enfant
