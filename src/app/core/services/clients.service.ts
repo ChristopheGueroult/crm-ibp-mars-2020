@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { StateClient } from '../enums/state-client.enum';
 import { Client } from '../models/client';
 
 @Injectable({
@@ -24,10 +25,14 @@ export class ClientsService {
     this.collection$ = col;
   }
 
-  // public getCollection(): Observable<Client[]> {
-  //   return this.collection$;
-  // }
-  // public setCollection(col: Observable<Client[]>) {
-  //   this.collection$ = col;
-  // }
+  // change state item
+  public changeState(item: Client, state: StateClient): Observable<Client> {
+    item.state = state;
+    return this.update(item);
+  }
+
+  // update item in collection
+  public update(item: Client): Observable<Client> {
+    return this.http.put<Client>(`${this.urlApi}/clients/${item.id}`, item);
+  }
 }
