@@ -21,12 +21,13 @@
     ☐ initialiser votre variable dans le subscribe() de this.clientsService.collection
 
   ✔ directive d'attr pour ouvrir et fermer le menu dans uicomponent (30mn) @done(21-03-25 09:54)
-  ☐ directive de structure ngFor pour le tableau (1h)
-  ☐ directive perso (1h)
-  ☐ pipes angular et pipe perso (1h)
-  ☐ htpp put et delete et post (1h)
-  ☐ 12h25 pause dej
-  ☐ formulaire et la validation de formulaire (3h)
+  ✔ directive de structure ngFor pour le tableau (1h) @done(21-03-25 16:55)
+  ✔ directive perso (1h) @done(21-03-25 16:55)
+  ✔ pipes angular et pipe perso (1h) @done(21-03-25 16:55)
+  ✔ 12h25 pause dej @done(21-03-25 16:55)
+  ☐ formulaire et la validation de formulaire (2h)
+  ☐ generate doc
+  ☐ webpack bundle analyzer
 
   ☐ tp sur les observables (subjects, behaviorSubject, Observable)
     ☐ tp edit
