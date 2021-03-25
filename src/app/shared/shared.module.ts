@@ -5,10 +5,11 @@ import { IconsModule } from '../icons/icons.module';
 import { TemplatesModule } from '../templates/templates.module';
 import { BtnComponent } from './components/btn/btn.component';
 import { TableLightComponent } from './components/table-light/table-light.component';
+import { TableDarkComponent } from './components/table-dark/table-dark.component';
 
 @NgModule({
-  declarations: [TableLightComponent, BtnComponent],
+  declarations: [TableLightComponent, BtnComponent, TableDarkComponent],
   imports: [CommonModule, RouterModule],
-  exports: [TemplatesModule, IconsModule, TableLightComponent, BtnComponent],
+  exports: [TemplatesModule, IconsModule, TableLightComponent, BtnComponent, TableDarkComponent],
 })
 export class SharedModule {}

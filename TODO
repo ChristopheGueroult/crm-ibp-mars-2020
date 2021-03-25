@@ -20,7 +20,7 @@
     ☐ créer un variable de type Client[]
     ☐ initialiser votre variable dans le subscribe() de this.clientsService.collection
 
-  ☐ directive d'attr pour ouvrir et fermer le menu dans uicomponent (30mn)
+  ✔ directive d'attr pour ouvrir et fermer le menu dans uicomponent (30mn) @done(21-03-25 09:54)
   ☐ directive de structure ngFor pour le tableau (1h)
   ☐ directive perso (1h)
   ☐ pipes angular et pipe perso (1h)

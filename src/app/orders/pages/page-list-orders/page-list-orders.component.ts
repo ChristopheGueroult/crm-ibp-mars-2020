@@ -10,9 +10,18 @@ import { OrdersService } from 'src/app/core/services/orders.service';
 export class PageListOrdersComponent implements OnInit {
   public collection!: Order[];
   public title = 'List Orders';
+  public headers = [
+    'Type',
+    'Client',
+    'NbJours',
+    'Tjm HT',
+    'Total HT',
+    'Total TTC',
+    'State',
+  ];
   constructor(private ordersService: OrdersService) {
-    this.ordersService.collection.subscribe((flux) => {
-      console.log(flux);
+    this.ordersService.collection.subscribe((data) => {
+      this.collection = data;
     });
   }
 
