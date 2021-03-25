@@ -21,8 +21,10 @@ export class OrdersService {
 
   // change state item
   public changeState(item: Order, state: StateOrder): Observable<Order> {
-    item.state = state;
-    return this.update(item);
+    // item.state = state;
+    const obj = { ...item };
+    obj.state = state;
+    return this.update(obj);
   }
 
   // update item in collection
