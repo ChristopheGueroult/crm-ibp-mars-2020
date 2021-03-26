@@ -4,7 +4,7 @@
       "tjmHt": 1200,
       "nbJours": 5,
       "tva": 20,
-      "state": "CONFIRMED",
+      "state": "CANCELED",
       "typePresta": "formation",
       "client": "Modis",
       "comment": "dsfhgshgfgh",
@@ -19,6 +19,16 @@
       "client": "M2i",
       "comment": "dsfhgshgfgh",
       "id": 2
+    },
+    {
+      "tjmHt": 1200,
+      "nbJours": 10,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": "Coaching",
+      "client": "Modis",
+      "comment": "Merci Modis",
+      "id": 3
     }
   ],
   "clients": [
