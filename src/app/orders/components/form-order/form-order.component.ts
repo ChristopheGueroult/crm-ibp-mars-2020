@@ -3,7 +3,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { StateOrder } from 'src/app/core/enums/state-order.enum';
 import { Order } from 'src/app/core/models/order';
 import { OrdersService } from 'src/app/core/services/orders.service';
-
+/**
+ * form used in add order and edit order
+ */
 @Component({
   selector: 'app-form-order',
   templateUrl: './form-order.component.html',
@@ -17,7 +19,6 @@ export class FormOrderComponent implements OnInit {
   constructor(private fb: FormBuilder, private ordersService: OrdersService) {}
 
   ngOnInit(): void {
-    console.log(this.ordersService.tempForm);
     if (this.ordersService.tempForm) {
       this.init = this.ordersService.tempForm;
     }

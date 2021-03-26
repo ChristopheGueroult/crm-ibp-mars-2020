@@ -1,0 +1,133 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>crm-ibp-mars documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	      <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">crm-ibp-mars documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<p>☐ Life cycles
+☐ TP @Input(), TP Observable (référence à Git et Github pour l&#39;exemple)</p>
+<p>☐ Page list client
+  ☐ test avec template container et un title en anglais list clients
+  ☐ le meme test avec template full width et title en anglais
+  ☐ le meme bouton avec le meme event et la meme fn que dans page list orders</p>
+<p>☐ page list client (récupérer la collection clients)
+  ☐ créer un enum (ACTIVE , INACTIVE) state-client
+  ☐ créer une interface client-i
+  ☐ créer le model (ng g class client)
+    ☐ default value state = ACTIVE (en utilisant l&#39;enum)
+    ☐ default value tva = 20
+    ☐ default value totalCaHT = 0
+  ☐ créer le service clients
+    ☐ prendre ex sur OrdersService appel http (.../clients)
+  ☐ pagelistclientscomponent.ts récupérer la flux de donné retourné par l&#39;appel http présent sur votre service
+    ☐ injecter votre service clients dans le constructor
+    ☐ créer un variable de type Client[]
+    ☐ initialiser votre variable dans le subscribe() de this.clientsService.collection</p>
+<p>  ✔ directive d&#39;attr pour ouvrir et fermer le menu dans uicomponent (30mn) @done(21-03-25 09:54)
+  ✔ directive de structure ngFor pour le tableau (1h) @done(21-03-25 16:55)
+  ✔ directive perso (1h) @done(21-03-25 16:55)
+  ✔ pipes angular et pipe perso (1h) @done(21-03-25 16:55)
+  ✔ 12h25 pause dej @done(21-03-25 16:55)
+  ☐ formulaire et la validation de formulaire (2h)
+  ☐ tp form enregistement temp form befor submit
+  ☐ generate doc
+  ☐ webpack bundle analyzer</p>
+<p>  ☐ tp sur les observables (subjects, behaviorSubject, Observable)
+    ☐ tp edit
+    ☐ tp delete
+    ☐ tp detail routes enfant</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'todo.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="./js/menu-wc.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

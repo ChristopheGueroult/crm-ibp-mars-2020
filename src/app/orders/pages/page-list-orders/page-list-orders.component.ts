@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { StateOrder } from 'src/app/core/enums/state-order.enum';
 import { Order } from 'src/app/core/models/order';
@@ -15,6 +16,7 @@ export class PageListOrdersComponent implements OnInit {
   public title = 'List Orders';
   public states = Object.values(StateOrder);
   public headers = [
+    'Actions',
     'Type',
     'Client',
     'NbJours',
@@ -25,7 +27,8 @@ export class PageListOrdersComponent implements OnInit {
   ];
   constructor(
     private ordersService: OrdersService,
-    private cd: ChangeDetectorRef
+    private cd: ChangeDetectorRef,
+    private router: Router
   ) {
     this.collection$ = this.ordersService.collection;
     // this.ordersService.collection.subscribe((data) => {
@@ -49,5 +52,9 @@ export class PageListOrdersComponent implements OnInit {
       item.state = res.state;
       this.cd.detectChanges();
     });
+  }
+
+  public goToEdit(id: number): void {
+    this.router.navigate(['orders', 'edit', id]);
   }
 }
