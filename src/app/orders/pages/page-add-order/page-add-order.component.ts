@@ -10,9 +10,8 @@ import { OrdersService } from 'src/app/core/services/orders.service';
 })
 export class PageAddOrderComponent implements OnInit {
   public item = new Order();
-  constructor(private ordersService: OrdersService, private router: Router) {
-    console.log(this.item);
-  }
+  public displayForm = false;
+  constructor(private ordersService: OrdersService, private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -20,5 +19,13 @@ export class PageAddOrderComponent implements OnInit {
     this.ordersService.add(item).subscribe((res) => {
       this.router.navigate(['orders']);
     });
+  }
+
+  public resetForm(): void {
+    this.displayForm = true;
+  }
+  public continuForm(): void {
+    this.item = this.ordersService.tempForm;
+    this.displayForm = true;
   }
 }

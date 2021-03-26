@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { StateOrder } from '../enums/state-order.enum';
 import { Order } from '../models/order';
@@ -8,15 +8,24 @@ import { Order } from '../models/order';
   providedIn: 'root',
 })
 export class OrdersService {
-  private collection$: Observable<Order[]>;
+  private collection$: BehaviorSubject<Order[]> = new BehaviorSubject<Order[]>([
+    new Order(),
+  ]);
   private urlApi = environment.urlApi;
   public tempForm!: Order;
   constructor(private http: HttpClient) {
-    this.collection$ = this.http.get<Order[]>(`${this.urlApi}/orders`);
+    // this.collection$ = this.http.get<Order[]>(`${this.urlApi}/orders`);
+    this.refreshCollection();
+  }
+
+  public refreshCollection() {
+    this.http.get<Order[]>(`${this.urlApi}/orders`).subscribe((data) => {
+      this.collection$.next(data);
+    });
   }
 
   // get collection
-  public get collection(): Observable<Order[]> {
+  public get collection(): Subject<Order[]> {
     return this.collection$;
   }
 
@@ -38,7 +47,9 @@ export class OrdersService {
   }
 
   // delete item in collection
-
+  public delete(id: number): Observable<Order> {
+    return this.http.delete<Order>(`${this.urlApi}/orders/${id}`);
+  }
   // get item by id in collection
   public getItemById(id: number): Observable<Order> {
     return this.http.get<Order>(`${this.urlApi}/orders/${id}`);

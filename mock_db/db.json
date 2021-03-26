@@ -6,7 +6,7 @@
       "tva": 20,
       "state": "CANCELED",
       "typePresta": "formation",
-      "client": "Modis",
+      "client": "Modis2",
       "comment": "dsfhgshgfgh",
       "id": 1
     },
@@ -16,29 +16,9 @@
       "tva": 20,
       "state": "CANCELED",
       "typePresta": "formation",
-      "client": "M2i",
+      "client": "M2i2",
       "comment": "dsfhgshgfgh",
       "id": 2
-    },
-    {
-      "tjmHt": 1200,
-      "nbJours": 10,
-      "tva": 20,
-      "state": "OPTION",
-      "typePresta": "Coaching",
-      "client": "Modis",
-      "comment": "Merci Modis",
-      "id": 3
-    },
-    {
-      "tjmHt": 1200,
-      "nbJours": 1,
-      "tva": 20,
-      "state": "OPTION",
-      "typePresta": "dsfg",
-      "client": "dfsg",
-      "comment": null,
-      "id": 4
     }
   ],
   "clients": [

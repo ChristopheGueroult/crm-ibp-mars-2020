@@ -19,9 +19,6 @@ export class FormOrderComponent implements OnInit {
   constructor(private fb: FormBuilder, private ordersService: OrdersService) {}
 
   ngOnInit(): void {
-    if (this.ordersService.tempForm) {
-      this.init = this.ordersService.tempForm;
-    }
     this.form = this.fb.group({
       tjmHt: [this.init.tjmHt],
       nbJours: [this.init.nbJours],

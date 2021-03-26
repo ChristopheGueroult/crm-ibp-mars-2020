@@ -59,5 +59,18 @@
         ☐ Déclarer la fn edit(item: Order) {utliser this.ordersService.update(item).subscribe(ici res de l'api)}
         ☐ Dans le subscribe, rediriger l'utilisateur vers la route orders
 
-    ☐ tp delete
+        ☐ TP DELETE
+
+        ☐ page list order html
+          ☐ ajouter un icon delete dans le meme td que l'icon edit
+          ☐ ajouter un (click)="delete(item.id)"
+
+        ☐ page list order ts
+          ☐ declarer la fn delete(id: number) {appeler fn delete sur service OrdersService et subscribe()}
+
+        ☐ orders service ts
+          ☐ declarer la fn delete(id: number) {appel http.delete(....)}
+
+        ☐ page list order ts
+          ☐ dans le subscribe de la fn delete, maj collection$ avec this.ordersService.collection
 

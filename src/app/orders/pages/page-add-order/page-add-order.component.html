@@ -1,3 +1,8 @@
 <app-template-container title="Add Order">
-  <app-form-order [init]="item" (submited)="add($event)"></app-form-order>
+  <div class="alert alert-info" *ngIf="!displayForm">
+    <p>Voulez reprendre le formulaire ?</p>
+    <button (click)="resetForm()">no</button>
+    <button (click)="continuForm()">yes</button>
+  </div>
+  <app-form-order *ngIf="displayForm" [init]="item" (submited)="add($event)"></app-form-order>
 </app-template-container>

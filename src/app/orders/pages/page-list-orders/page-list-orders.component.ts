@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Subject } from 'rxjs';
 import { StateOrder } from 'src/app/core/enums/state-order.enum';
 import { Order } from 'src/app/core/models/order';
 import { OrdersService } from 'src/app/core/services/orders.service';
@@ -12,7 +12,7 @@ import { OrdersService } from 'src/app/core/services/orders.service';
 })
 export class PageListOrdersComponent implements OnInit {
   // public collection!: Order[];
-  public collection$: Observable<Order[]>;
+  public collection$: Subject<Order[]> = new Subject<Order[]>();
   public title = 'List Orders';
   public states = Object.values(StateOrder);
   public headers = [
@@ -56,5 +56,10 @@ export class PageListOrdersComponent implements OnInit {
 
   public goToEdit(id: number): void {
     this.router.navigate(['orders', 'edit', id]);
+  }
+  public delete(id: number): void {
+    this.ordersService.delete(id).subscribe((data) => {
+      this.ordersService.refreshCollection();
+    });
   }
 }
