@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Order } from 'src/app/core/models/order';
 import { OrdersService } from 'src/app/core/services/orders.service';
 
@@ -9,7 +10,7 @@ import { OrdersService } from 'src/app/core/services/orders.service';
 })
 export class PageAddOrderComponent implements OnInit {
   public item = new Order();
-  constructor(private ordersService: OrdersService) {
+  constructor(private ordersService: OrdersService, private router: Router) {
     console.log(this.item);
   }
 
@@ -17,7 +18,7 @@ export class PageAddOrderComponent implements OnInit {
 
   public add(item: Order): void {
     this.ordersService.add(item).subscribe((res) => {
-      console.log(res);
+      this.router.navigate(['orders']);
     });
   }
 }

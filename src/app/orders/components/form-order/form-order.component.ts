@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { StateOrder } from 'src/app/core/enums/state-order.enum';
 import { Order } from 'src/app/core/models/order';
+import { OrdersService } from 'src/app/core/services/orders.service';
 
 @Component({
   selector: 'app-form-order',
@@ -13,9 +14,13 @@ export class FormOrderComponent implements OnInit {
   @Output() submited: EventEmitter<Order> = new EventEmitter<Order>();
   public form!: FormGroup;
   public states = Object.values(StateOrder);
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private ordersService: OrdersService) {}
 
   ngOnInit(): void {
+    console.log(this.ordersService.tempForm);
+    if (this.ordersService.tempForm) {
+      this.init = this.ordersService.tempForm;
+    }
     this.form = this.fb.group({
       tjmHt: [this.init.tjmHt],
       nbJours: [this.init.nbJours],
@@ -33,5 +38,9 @@ export class FormOrderComponent implements OnInit {
 
   public formSubmit(): void {
     this.submited.emit(this.form.value);
+  }
+
+  ngOnDestroy(): void {
+    this.ordersService.tempForm = this.form.value;
   }
 }
